@@ -1,5 +1,5 @@
 import { pickForYou } from "../../assets/pickforYou"
-import Section3PickForYouItem from "./section3PickForYouItem"
+import Section3PickForYouItem from "./Section3PickForYouItem"
 import Button from "../Button"
 
 function Section3Container() {

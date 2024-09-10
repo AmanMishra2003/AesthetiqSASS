@@ -1,4 +1,4 @@
-import ReusableFooterContainer from "./reusableFooterContainer";
+import ReusableFooterContainer from "./ReusableFooterContainer";
 import ContactUs from "./ContactUs";
 
 const product = [
