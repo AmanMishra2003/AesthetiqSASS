@@ -7,7 +7,7 @@ import Navbar from './FrontendComponent/Navbar/Navbar'
 import NavItems from './FrontendComponent/Navbar/NavItems'
 import Items from './FrontendComponent/Navbar/Items'
 import Logo from './FrontendComponent/Navbar/Logo'
-import MenuBurger from './FrontendComponent/Navbar/menuBurger'
+import MenuBurger from './FrontendComponent/Navbar/MenuBurger'
 import Section from './FrontendComponent/mainContainerfolder/Section'
 import MainContainer from './FrontendComponent/mainContainerfolder/MainContainer'
 
