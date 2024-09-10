@@ -1,0 +1,47 @@
+
+
+
+//margin
+$base-margin: 1rem;
+
+//padding
+$base-padding: 1rem;
+
+//font-size
+$base-fontSize: 1rem;
+
+
+
+//font family
+@font-face {
+    font-family: 'haerinfont';
+    src: url('./../assets/fonts/Haerins.otf') format('opentype'); // Correct path to the font file
+    font-weight: 100;
+    // font-style: cursive;
+}
+//heading
+@font-face {
+    font-family: 'headingFont';
+    src: url('./../assets/fonts/Elyaris-VGBGB.ttf') format('opentype'); // Correct path to the font file
+    font-weight: 100;
+    font-style: cursive;
+}
+
+@font-face {
+    font-family: 'normalFont';
+    src: url('./../assets/fonts/Denton-Font-Family/Denton\ Test\ Medium\ 500.otf') format('TrueType'); // Correct path to the font file
+    // font-weight: 100;
+    font-style: cursive;
+}
+
+@font-face {
+    font-family: 'normalFontLight';
+    src: url('./../assets/fonts/Denton-Font-Family/Denton\ Test\ Thin\ 100.otf') format('opentype'); // Correct path to the font file
+    // font-weight: 100;
+    font-style: cursive;
+}
+
+
+$logo-font: 'haerinfont';
+$heading-font: 'headingFont';
+$normal-font: 'normalFont';

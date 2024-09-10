@@ -1,0 +1,10 @@
+@function chooseColoring($num){
+    $color:none;
+    @if $num==0{
+        $color: $primary;
+    } @else if $num==1 {
+        $color: $secondary;
+    }
+
+    @return $color;
+}

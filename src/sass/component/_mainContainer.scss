@@ -1,0 +1,64 @@
+.section1 {
+    width: 100%;
+    min-width: 340px;
+    height: 90vh;
+    min-height: 500px;
+    position: relative;
+    z-index: 0;
+    color: $primary;
+    
+    
+
+    @include breakpoint(910px){
+        @include colors($color:$secondary, $backgroundColor:$primary);
+        left: 0%;
+        letter-spacing: 20px;
+    }
+
+    &::before{
+        content: '';
+        background-image: url('/images/removeMainContainerImage.png');
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+
+        @include breakpoint(1200px){
+            background-size: contain;
+        }
+    }
+
+    .logo {
+        font-size: clamp($base-fontSize, 20vw, $base-fontSize*15);
+        font-family: $heading-font;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,clamp(-80%, -60%, -50% ));
+        z-index: 10;
+        color: $secondary;
+        letter-spacing: 5px;
+        transition: all 300ms;
+
+        @include breakpoint(910px){
+            letter-spacing: 20px;
+            color: $secondary;
+            -webkit-text-stroke-width: 5px;
+            -webkit-text-stroke-color: $primary;
+            &:hover{
+                letter-spacing: 10px;
+                color: $primary;
+                -webkit-text-stroke-color: $secondary;
+            }
+        }
+    }
+    
+
+
+    
+}

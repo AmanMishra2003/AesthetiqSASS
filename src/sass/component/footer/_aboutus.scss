@@ -1,0 +1,81 @@
+.aboutUsSection{
+    min-height: 40vh;
+    @include displayFlex(center,flex-start,row);
+    img{
+        display: none;
+        @include breakpoint(795px){
+            display: block;
+            height: 100%;
+        }
+    }
+    
+    .aboutUsContent{
+        // height: 100%;
+        background-color: $primary;
+        padding: 3% 3% ;
+        @include displayFlex(center,flex-start,column);
+        gap: 20px;
+
+        @include breakpoint(795px){
+           padding: 2% 5% ;
+        }
+
+        .heading{
+            font-size: clamp($base-fontSize*1.5, 5vh, $base-fontSize*7);
+            font-weight:bold;
+            margin-bottom: 1%;
+        }
+        .description{
+            font-size: clamp($base-fontSize, 3vh, $base-fontSize*4);
+            font-family: 'normalfontlight';
+            @include breakpoint(795px){
+               letter-spacing: 5px;
+             }
+     
+        }
+
+        .connectUsLink{
+            // margin-top: 10%;
+            padding-bottom: 5px;
+            position: relative;
+            &::after{
+                content: url('');
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $black;
+                transition: width 300ms ease-in-out;
+            }
+            &:hover::after{
+                width: 150%;
+            }
+
+            
+            a{
+                font-size: clamp($base-fontSize, 3vh, $base-fontSize*4);
+                // text-decoration: ;
+                letter-spacing: 3px;
+                text-transform: lowercase;
+                color: black;
+                text-decoration: none;
+                position: relative;
+
+                &::after{
+                    content: url('/images/arrow.svg');
+                    position: absolute;
+                    top: 0;
+                    left: 125%;
+                    transition: transform 300ms ease-in-out;
+                    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+                }
+
+                &:hover::after{
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,78 @@
+.section5 {
+    width: 100vw;
+   
+    // overflow: hidden;
+    // min-height: 100vh;
+    background-color: $primary;
+    margin-bottom: $base-margin;
+    @include displayFlex($justify-content: center, $align-items: none, $flex-direction: row);
+
+    .newCollectionContainer {
+        width: 90%;
+        min-width: 330px;
+        padding: 2rem 0;
+        display: gird;
+        @include breakpoint(910px){
+            width: 80%;
+            // grid-template-rows: repeat(1,1fr);
+        }
+        @include breakpoint(1210px){
+            width: 70%;
+            // grid-template-rows: repeat(1,1fr);
+        }
+
+        @include heading;
+        @include button;
+
+        .gridDisplay {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+            
+            @include breakpoint(540px){
+                grid-template-columns: repeat(2, 1fr);
+                // gap: 2rem;
+                .gridImageContainer:nth-child(4){
+                    grid-column: span 2;
+                }
+                .gridImageContainer:nth-child(3){
+                    grid-column-start: 2;
+                    grid-row-end: 5;
+                }
+            }
+            @include breakpoint(720px){
+                grid-template-columns: repeat(3, 1fr);
+                .gridImageContainer:nth-child(5){
+                    grid-row: span 2;
+                }
+                .gridImageContainer:nth-child(3){
+                    grid-column-start: 3;
+                    grid-row-end: 1;
+                }
+            }
+
+            .gridImageContainer {
+                @include details($size:'big');
+                @include displayFlex($justify-content:space-between, $align-items: none, $flex-direction: column);
+                .imgContainer{
+                    overflow: hidden;
+                    height: 100%;
+                    width: 100%;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        transition: all 200ms ease-in-out;
+                        
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,111 @@
+// $remainingWidth:0%;
+.section6 {
+    width: 100vw;
+    background-color: $black;
+    @include displayFlex(center, center, row);
+
+    // padding: 0 $base-padding*2;
+    // margin: auto;
+    @include breakpoint(740px) {
+        padding: 0 $base-padding*3;
+        // width: 80vw;
+    }
+
+    @include breakpoint(1000px) {
+        padding: 0 $base-padding*8;
+        // width: 80vw;
+    }
+
+    // $categoryWidth: 100%;
+    // $categorypadding:0;
+    // $remainingWidth: 100% - $categoryWidth;
+
+    // @include breakpoint(720px){
+    //     $categoryWidth: 40%;
+    //     $categorypadding: 0 $base-padding*4;
+    //     $remainingWidth: 100% - $categoryWidth;
+    // }
+
+    // $remainingWidth: 100% - $categoryWidth;
+
+    // @debug $categoryWidth;
+
+    .categories {
+        width: 90%;
+        color: $primary;
+        padding: $base-padding*.5 $base-padding;
+
+        @include breakpoint(740px) {
+            width: 40%;
+        }
+
+        // @include breakpoint(1000px) {
+        //     width: 30%;
+        // }
+
+
+        h3 {
+            font-size: clamp($base-fontSize*1.5, 4vh, $base-fontSize*5);
+            margin-bottom: $base-margin*.5;
+        }
+
+        .categoriesContainer {
+            padding: $base-padding*.5 $base-padding;
+            font-size: $base-fontSize*1.5;
+
+            .singleCategories {
+                margin: 0 0 .5em 0;
+                padding: .25em .5em;
+                text-transform: capitalize;
+                font-family: 'normalfont';
+                letter-spacing: .15em;
+                // @include displayFlex(space-between, center, row);
+                position: relative;
+                width: 100%;
+                z-index: 0;
+                transition: background-color 300ms ease-in-out;
+
+                &::after {
+                    content: url('/images/arrow.svg');
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 100%;
+                    // width: 10%;
+                    z-index: 10;
+                    transition: transform 300ms ease-in-out;
+                }
+
+                &:hover {
+                    background-color: whitesmoke;
+                    color: black;
+                }
+
+                &:hover::after {
+                    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+                    transform: rotate(-45deg);
+
+                }
+
+
+
+            }
+
+        }
+
+    }
+
+    img {
+        height: 100%;
+        width: 0%;
+
+        @include breakpoint(740px) {
+            width: 60%;
+        }
+
+        // @include breakpoint(1000px) {
+        //     width: 70%;
+        // }
+
+    }
+}

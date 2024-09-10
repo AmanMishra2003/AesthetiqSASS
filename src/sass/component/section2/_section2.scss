@@ -1,0 +1,104 @@
+
+
+.section2 {
+    width: 100vw;
+    overflow: hidden;
+
+
+    .outterdiv {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        padding: 0 5% 10% 5%;
+        @include displayFlex($justify-content: center, $align-items: center, $flex-direction: column);
+
+        @include breakpoint(680px) {
+            // padding: 0 6% 6% 6%;
+            @include displayFlex($justify-content: space-evenly, $align-items: center, $flex-direction: column);
+        }
+
+        .ArtistsDetialsComponent {
+            width: 90%;
+            position: relative;
+            // padding-left: 0 $base-fontSize*3;
+            @include displayFlex($justify-content: center, $align-items: center, $flex-direction: column);
+
+            &:nth-of-type(2n) {
+                @include breakpoint(680px) {
+                    @include displayFlex($justify-content: center, $align-items: flex-end, $flex-direction: row-reverse);
+
+                    img {
+                        height: 20em;
+                    }
+                }
+
+                @include breakpoint(1300px) {
+                    gap: 0;
+                    img {
+                        height: 30em;
+                    }
+                }
+            }
+
+            @include breakpoint(1300px) {
+                gap: 5rem;
+                @include displayFlex($justify-content: center, $align-items: flex-end, $flex-direction: row);
+                // .dataContainer{
+                //     width: 40%;
+                // }
+
+            }
+
+            img {
+                height: 25em;
+                aspect-ratio: 4/5;
+                object-fit: contain;
+                filter: drop-shadow(0 .75rem 1rem white);
+
+                @include breakpoint(680px) {
+                    height: 45em;
+                }
+
+            }
+
+
+            @include dataContainer;
+
+
+
+        }
+
+
+        // @mixin innerDiv($heightatSmall: 0, $heightatMedium: 0, $heightatLarge: 0) {
+        //     .innerdiv {
+        //         background-color: $black;
+        //         position: absolute;
+        //         right: 0;
+        //         bottom: 0;
+        //         height: $heightatSmall; // 90%
+        //         width: 100%;
+        //         z-index: -100;
+
+        //         @include breakpoint(1150px) {
+        //             height: $heightatLarge; //85%
+        //         }
+        //     }
+        // }
+
+
+        @include innerDiv($heightatSmall: 90%, $heightatLarge: 85%)
+        // .innerdiv{
+        //     background-color: $black;
+        //     position: absolute;
+        //     right: 0;
+        //     bottom: 0;
+        //     height: 90%;
+        //     width: 100%;
+        //     z-index: -100;
+        //     @include breakpoint(1150px){
+        //         height: 85%;
+        //     }
+        // }
+
+    }
+}

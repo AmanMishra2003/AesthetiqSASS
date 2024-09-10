@@ -1,0 +1,60 @@
+
+.section4{
+    // margin-top: 3rem;
+    width: 100vw;
+    // background-color: $black;
+    overflow: hidden;
+    height: 60vh;
+
+    .outterdiv{
+        width:100%;
+        height: 100%;
+        position:relative;
+
+        @include dataContainer;
+        @include innerDiv($heightatSmall: 90%, $heightatMedium: 90%, $heightatLarge: 90%);
+
+        .imageTriangleFace{
+            height: 400px;
+            aspect-ratio: 3/2;
+            position: absolute;
+            display: none;
+            // z-index: -100;
+            @include breakpoint(740px){
+                display: block;
+                height: 22.5em;
+                right: -5em;
+            }
+            @include breakpoint(1100px){
+                height: 25em;
+                right: 3em;
+            }
+        }
+        .dataContainer{
+            position: absolute;
+            width: 80%;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-50%,50%);
+            @include breakpoint(1100px){
+                width: 50%;
+                transform: translate(-70%,70%);
+            }
+
+
+            button{
+                
+            }
+
+            .name{
+                font-size: $base-fontSize*2;
+            }
+
+        }
+        
+       
+            
+
+
+    }
+}

@@ -1,0 +1,132 @@
+.footerContainer{
+    width: 100%;
+    @include displayFlex(flex-start, flex-start, row);
+    // gap: 10px;
+    flex-wrap: wrap;
+    background-color: $black;
+    color: $primary;
+    padding-top: 5%;
+    overflow: hidden;
+
+    @include breakpoint(440px){
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .heading{
+        font-size: clamp($base-fontSize*1.5, 3vh, $base-fontSize*7);
+    }
+
+    .footerOptionContainer{
+        padding:0 1.5em;
+        min-width: 20%;
+        flex: 1;
+        @include displayFlex(flex-start, flex-start, column);
+        gap: 10px;
+
+        .options{
+            font-family: 'normalFontlight';
+            position: relative;
+
+            &::after{
+                content: '';
+                background-color: white;
+                height: 2px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                transition: width 200ms ease-in-out;
+            }
+
+            &:hover::after{
+                width: 100%;
+            }
+        }
+    }
+
+    .ContantUsForm{
+        flex: 1;
+        max-width: 100%;
+        padding:0 1.5em;
+        padding-top: 1rem;
+
+        @include breakpoint(440px){
+            padding-top: 0;
+        }
+        form{
+            margin: $base-margin 0;
+            @include displayFlex(flex-start, flex-start, row);
+            gap: 10px;
+
+            input{
+                padding: .5em 1em;
+                border-radius: .75em;
+                border-color:white ;
+                background-color: $black;
+                color: white;
+                font-size: clamp($base-fontSize*.75, 1rem, $base-fontSize*4);
+                flex: 1;
+            }
+            input:focus,
+            input:focus-visible{
+               outline: 2px solid $secondary;
+            }
+    
+            button{
+                border: none;
+                outline: none;
+                border-color: black;
+                background-color: $black;
+                color: white;
+                font-size: 2rem;
+                transform-origin: 0;
+                transition: transform 300ms ease-in-out;
+                
+
+                &:hover{
+                    transform: translate(10px) scale(1.5);
+                }
+            }
+        }
+
+        .socialMediaLinks{
+            list-style: none;
+            @include displayFlex(space-between, center , row);
+
+            li{
+                transition: all 200ms;
+                &:hover{
+                    transform: scale(1.25);
+                    filter: drop-shadow(0 .75rem 1rem white);
+                    cursor: pointer;
+                }
+            }
+           
+        }
+        
+    }
+
+    .line{
+        display: block;
+        width: 80%;
+        background-color: $primary;
+        height: 3px;
+        margin: $base-margin*1.5 auto;
+    }
+
+    .credits{
+        margin: $base-margin*1.5 auto;
+        @include displayFlex(center, center, column);
+        a{
+            text-decoration: none;
+            color: white;
+            text-align: center;
+        }
+        @include breakpoint(700px){
+            @include displayFlex(center, center, row);
+            gap: 10px;
+        }
+    
+    }
+}

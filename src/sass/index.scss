@@ -1,0 +1,26 @@
+
+@import 'variables';
+@import 'colors';
+@import 'mixins';
+@import 'mediaQuery';
+// @import 'function';
+// @import 'extension';
+
+
+
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+@import 'component/body.scss';
+@import 'component/header/navbar.scss';
+@import 'component/mainContainer.scss';
+@import 'component/header/menuBurger.scss';
+@import 'component/section2/section2.scss';
+@import 'component/section3/section3.scss';
+@import 'component/section4/section4';
+@import 'component/section5/section5.scss';
+@import 'component/section6/section6.scss';
+@import 'component/footer/aboutus.scss';
+@import 'component/footer/footerSection';
+
