@@ -4,7 +4,7 @@
     width: 100vw;
     // background-color: $black;
     overflow: hidden;
-    height: 60vh;
+    height: 70vh;
 
     .outterdiv{
         width:100%;
@@ -42,13 +42,13 @@
             }
 
 
-            button{
+            // button{
                 
-            }
+            // }
 
-            .name{
-                font-size: $base-fontSize*2;
-            }
+            // .name{
+            //     font-size: clamp($base-fontSize*2, 8vh, $base-fontSize*20);
+            // }
 
         }
         

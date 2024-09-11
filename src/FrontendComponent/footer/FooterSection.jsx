@@ -24,7 +24,7 @@ function FooterSection() {
                 <div className="line"></div>
 
                 <div className="credits">
-                    <span>&copy; Copyrights</span> <span>Developer : <a href="https://www.linkedin.com/in/amanmishra2003/" target="_blank">@Aman Mishra2003</a></span> || <span>UI/Wx Designer : <a href="https://www.behance.net/nishantnegi03" target="_blank">@NishantNegi03</a></span>
+                    <span>&copy; Copyrights</span> <span>Developer : <a href="https://www.linkedin.com/in/amanmishra2003/" target="_blank">@Aman Mishra2003</a></span> || <span>UI/UX Designer : <a href="https://www.behance.net/nishantnegi03" target="_blank">@NishantNegi03</a></span>
                 </div>
         </div>
     )

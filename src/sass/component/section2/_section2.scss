@@ -28,14 +28,14 @@
                     @include displayFlex($justify-content: center, $align-items: flex-end, $flex-direction: row-reverse);
 
                     img {
-                        height: 20em;
+                        height: 30em;
                     }
                 }
 
                 @include breakpoint(1300px) {
                     gap: 0;
                     img {
-                        height: 30em;
+                        height: 40em;
                     }
                 }
             }
@@ -56,7 +56,7 @@
                 filter: drop-shadow(0 .75rem 1rem white);
 
                 @include breakpoint(680px) {
-                    height: 45em;
+                    height: 40em;
                 }
 
             }
