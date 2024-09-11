@@ -22,7 +22,7 @@ function Section3Container() {
             </div>
             <div className="btntoggleBar">
                 <Button>
-                    →
+                <img src="/images/arrow.svg" alt="" />
                 </Button>
             </div>
         </div>

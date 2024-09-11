@@ -1,6 +1,7 @@
 import { GridImages } from "../../assets/gridImageArray"
 import GridImageBox from "./GridImageBox"
 import Button from "../Button"
+
 function Section5Container() {
     return (
         <div className="newCollectionContainer">
@@ -17,7 +18,7 @@ function Section5Container() {
             </div>
             <div className="btntoggleBar">
                 <Button>
-                    →
+                    <img src="/images/arrow.svg" alt="" />
                 </Button>
             </div>
         </div>

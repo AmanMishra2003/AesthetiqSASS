@@ -12,24 +12,6 @@
         position:relative;
 
         @include dataContainer;
-        @include innerDiv($heightatSmall: 90%, $heightatMedium: 90%, $heightatLarge: 90%);
-
-        .imageTriangleFace{
-            height: 400px;
-            aspect-ratio: 3/2;
-            position: absolute;
-            display: none;
-            // z-index: -100;
-            @include breakpoint(740px){
-                display: block;
-                height: 22.5em;
-                right: -5em;
-            }
-            @include breakpoint(1100px){
-                height: 25em;
-                right: 3em;
-            }
-        }
         .dataContainer{
             position: absolute;
             width: 80%;
@@ -41,17 +23,30 @@
                 transform: translate(-70%,70%);
             }
 
-
-            // button{
-                
-            // }
-
-            // .name{
-            //     font-size: clamp($base-fontSize*2, 8vh, $base-fontSize*20);
-            // }
-
         }
         
+        
+        .imageTriangleFace{
+            height: 400px;
+            aspect-ratio: 3/2;
+            position: absolute;
+            display: none;
+            opacity: .5;
+            // z-index: -100;
+            @include breakpoint(740px){
+                display: block;
+                height: 22.5em;
+                right: -5em;
+                opacity: .8;
+            }
+            @include breakpoint(1100px){
+                height: 25em;
+                right: 3em;
+                opacity: 1;
+            }
+        }
+        @include innerDiv($heightatSmall: 90%, $heightatMedium: 90%, $heightatLarge: 90%);
+       
        
             
 
