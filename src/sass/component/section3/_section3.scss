@@ -23,12 +23,12 @@
                 aspect-ratio: 1/1;
                 position: absolute;
                 top: -6vh;
-                left: 50%;
+                left: 30%;
                 transform: translateX(-50%);
             }
 
             @include breakpoint(700px) {
-                // height: 35vh;
+                height: 50vh;
                 // height: 42.5dvh;
                 img {
                     left: 0%;

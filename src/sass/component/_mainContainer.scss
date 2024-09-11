@@ -37,7 +37,7 @@
         font-size: clamp($base-fontSize, 20vw, $base-fontSize*15);
         font-family: $heading-font;
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%,clamp(-80%, -60%, -50% ));
         z-index: 10;
@@ -46,6 +46,7 @@
         transition: all 300ms;
 
         @include breakpoint(910px){
+            top: 50%;
             letter-spacing: 20px;
             color: $secondary;
             -webkit-text-stroke-width: 5px;
